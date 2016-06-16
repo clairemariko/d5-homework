@@ -26,22 +26,26 @@
 #   - given "hanger, deodorant, candy wrapper, rubber band", determine that those items need to be collected from "a10, a4, c8, and b9"
 
 
-#question 1
-# Given a bay, returns the item in that bay
-  - given "b5", should return 'nail filer'
-def find_bay(row, bays)
-  for bay in bays 
-    key = find_item(bay, row)
-    return key if key
-  end
-end
+# #question 1
+# # Given a bay, returns the item in that bay
+#   - given "b5", should return 'nail filer'
+# def find_bay(row, bays)
+#   for bay in bays 
+#     key = find_item(bay, row)
+#     return key if key
+#   end
+# end
 
-def find_item (bay, row)
-  for key, value in bay
-    return value if key == row
-  end
-  return false
-end
+# def find_item (bay, row)
+#   for key, value in bay
+#     return value if key == row
+#   end
+#   return false
+# end
+
+
+
+
 
 
 
@@ -62,21 +66,30 @@ def find_key( bay, item )
 end
 
 
+
+
+
+
+
+
+
+
+
 #question 3
 #I'm given a list of keys and i need to loop in the @bays array to find the bay
 
-def find_the_bay( item, bays)
-    for bay in bays
-      value = find_by_values(bay, item )
-      return value if value 
-    end
-end
+# def find_the_bay( item, bays)
+#     for bay in bays
+#       value = find_by_values(bay, item )
+#       return value if value 
+#     end
+# end
 
-def find_by_values(bay, item)
-  result = []
-    for key, value in bay 
-      return value if key == item
-  result << find_by_values(bay, item)
+# def find_by_values(bay, item)
+#   result = []
+#     for key, value in bay 
+#       return value if key == item
+#   result << find_by_values(bay, item)
 
 
 
@@ -116,13 +129,13 @@ def find_by_values(bay, item)
 
 
 
-#question 3.5
-def find_difference_in_rows(bay, bay1, bay2)
-  keys = bay.keys
-  higher = keys.index(bay1)
-  lower = keys.index(bay2)
-number_of_bays_apart = higher - lower
-end
+# #question 3.5
+# def find_difference_in_rows(bay, bay1, bay2)
+#   keys = bay.keys
+#   higher = keys.index(bay1)
+#   lower = keys.index(bay2)
+# number_of_bays_apart = higher - lower
+# end
 
 
 
@@ -135,22 +148,22 @@ end
 # I think it also maybe due to my 'return' not sure how to return multiple
 # items
 
-def find_the_bays(*item, bays)
-  for bay in bays
-    key = find_key(*item, bay)
-    # return key if key
-  end
-  return bag
-end
+# def find_the_bays(*item, bays)
+#   for bay in bays
+#     key = find_key(*item, bay)
+#     # return key if key
+#   end
+#   return bag
+# end
 
-def find_key(*item, bay)
-  bag = []
-  for key, value in bay
-    if value == item
-    bag << key
-  end
-end
-end
+# def find_key(*item, bay)
+#   bag = []
+#   for key, value in bay
+#     if value == item
+#     bag << key
+#   end
+# end
+# end
 
 
 

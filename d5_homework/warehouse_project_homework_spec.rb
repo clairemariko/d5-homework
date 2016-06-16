@@ -51,13 +51,13 @@ class TestMyFunctions < MiniTest::Test
 
   end
 
-  #question 1
-  def test_find_bay()
-    result = find_bay(:B5, @Bays)
-    assert_equal("Nail Filer", result)
+  # #question 1
+  # def test_find_bay()
+  #   result = find_bay(:B5, @Bays)
+  #   assert_equal("Nail Filer", result)
 
-  def test_find_item
-    assert("Nail Filer", find_item(@B_Bay, :B5))
+  # def test_find_item
+  #   assert("Nail Filer", find_item(@B_Bay, :B5))
 
   #question 2
 
@@ -80,15 +80,15 @@ class TestMyFunctions < MiniTest::Test
   #question 3
 
 
-def test_find_the_bays()
-    result = find_the_bays(:B5, :B10, :B6, @Bays)
-    assert_equal(["Nail Filer", "Cookie Jar", "Tooth Paste"], result)
-  end
+# def test_find_the_bays()
+#     result = find_the_bays(:B5, :B10, :B6, @Bays)
+#     assert_equal(["Nail Filer", "Cookie Jar", "Tooth Paste"], result)
+#   end
 
 
-  def test_find_by_values()
-    assert_equal([ "Nail Filer", "Cookie Jar", "Tooth Paste"],find__by_values(@B_Bay,:B5, :B10, :B6))
-  end
+#   def test_find_by_values()
+#     assert_equal([ "Nail Filer", "Cookie Jar", "Tooth Paste"],find__by_values(@B_Bay,:B5, :B10, :B6))
+#   end
 
 
 # OTHER WAYS I THOUGHT OF 
@@ -109,10 +109,10 @@ def test_find_the_bays()
 
  # #finding the diff in rows
 
-  def test_find_difference_in_rows
-    result = find_difference_in_rows(@B_Bay, :B10, :B5)
-    assert_equal(5, result)
-  end
+  # def test_find_difference_in_rows
+  #   result = find_difference_in_rows(@B_Bay, :B10, :B5)
+  #   assert_equal(5, result)
+  # end
 
     # could this work too? but you are not given B_Bay...
     # def test_find_items
@@ -133,16 +133,16 @@ def test_find_the_bays()
 
 
 
-  question4
-  def test_find_the_bays()
-    result = find_the_bays("Shoe Lace", "Rusty Nail", "Leg Warmers", @Bays)
-    assert_equal([:C1, :C9, :C10], result)
-  end
+  # question4
+  # def test_find_the_bays()
+  #   result = find_the_bays("Shoe Lace", "Rusty Nail", "Leg Warmers", @Bays)
+  #   assert_equal([:C1, :C9, :C10], result)
+  # end
 
 
-  def test_find_key()
-    assert_equal([:C1, :C9, :C10],find_key(@C_Bay,"Shoe Lace", "Rusty Nail", "Leg Warmers"))
-  end
+  # def test_find_key()
+  #   assert_equal([:C1, :C9, :C10],find_key(@C_Bay,"Shoe Lace", "Rusty Nail", "Leg Warmers"))
+  # end
 
 
 end
